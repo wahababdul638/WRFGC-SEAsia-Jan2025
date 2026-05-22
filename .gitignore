@@ -1,0 +1,43 @@
+# WRF simulation output — too large for git (148 GB total)
+WRF/run/wrfout_*
+WRF/run/wrfin_*
+WRF/run/wrfrst_*
+WRF/run/wrfbdy_*
+WRF/run/wrfinput_*
+WRF/run/met_em*
+WRF/run/rsl.*
+WRF/run/*.exe
+WRF/run/*.log
+
+# WPS intermediate files
+WPS/FILE:*
+WPS/GRIBFILE*
+WPS/met_em*
+WPS/*.log
+
+# Large archives / binaries
+analysis/scripts/v4.4.tar
+analysis/scripts/v4.4.zip
+
+# Presentations (large PPTX binaries)
+analysis/presentations/*.pptx
+
+# Private documents
+analysis/docs/Dissertation_Proposal.docx
+analysis/docs/*.docx
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*~
