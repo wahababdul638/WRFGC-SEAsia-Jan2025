@@ -55,7 +55,7 @@ def plot(d):
         cb.ax.tick_params(labelsize=7)
         ax.set_title(f'{letter}  {title}', fontsize=9.5, pad=6)
 
-    savefig(fig, 'figP6_spatial_soa_pm25.png')
+    savefig(fig, 'fig06_spatial_pm25_soa.png')
 
 
 if __name__ == '__main__':

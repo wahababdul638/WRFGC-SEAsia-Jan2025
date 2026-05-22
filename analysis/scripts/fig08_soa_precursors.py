@@ -48,9 +48,9 @@ def plot(d):
                              subplot_kw={'projection': PROJ})
     fig.subplots_adjust(wspace=0.06, hspace=0.14, top=0.91, bottom=0.04)
     fig.suptitle(
-        'WRF-GC January 2025 — SOA Precursor Identification (Stagnation Composite)\n'
-        f'n = {d.stag_mask.sum()} stagnation days  |  VC ≤ {d.vc_median:.0f} m² s⁻¹  '
-        '|  SOAP = gas-phase precursor  |  SOAS = aerosol product in PM$_{2.5}$',
+        'SOA Precursor Spatial Distribution — Stagnation Composite\n'
+        f'WRF-GC January 2025  |  n = {d.stag_mask.sum()} stagnation days  |  '
+        'SOAP = gas-phase precursor  |  SOAS = aerosol product in PM$_{2.5}$',
         fontsize=10.5, y=0.97)
 
     sk = 8
@@ -97,7 +97,7 @@ def plot(d):
              'before condensing to SOAS (d).  Source separation requires sensitivity runs.',
              ha='center', fontsize=7, color='#444', style='italic')
 
-    savefig(fig, 'figP8_soa_precursor_spatial.png')
+    savefig(fig, 'fig08_soa_precursors.png')
 
 
 if __name__ == '__main__':

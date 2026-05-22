@@ -18,8 +18,8 @@ from precompute import load_all
 def plot(d):
     fig, axes = plt.subplots(1, 3, figsize=(13, 5))
     fig.subplots_adjust(wspace=0.35, top=0.85, bottom=0.18)
-    fig.suptitle('Atmospheric Oxidant Concentrations at Bangkok — Stagnation vs Ventilated\n'
-                 'WRF-GC January 2025  |  Snapshot at 07:00 LST (end of night)',
+    fig.suptitle('Atmospheric Oxidant Concentrations — Bangkok (13.75°N, 100.50°E)\n'
+                 'WRF-GC January 2025  |  Stagnation vs Ventilated  |  07:00 LST snapshots',
                  fontsize=11)
 
     oxidants = [
@@ -73,7 +73,7 @@ def plot(d):
              'from daily 00:00 UTC output alone.',
              ha='center', fontsize=7.5, style='italic', color='#555')
 
-    savefig(fig, 'figP3_oxidants.png')
+    savefig(fig, 'fig03_oxidants.png')
 
 
 if __name__ == '__main__':

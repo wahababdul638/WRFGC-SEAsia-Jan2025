@@ -34,8 +34,62 @@ __pycache__/
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
+# WRF source code (not needed for analysis)
+WRF/arch/
+WRF/chem/
+WRF/dyn_em/
+WRF/external/
+WRF/frame/
+WRF/hydro/
+WRF/inc/
+WRF/main/
+WRF/phys/
+WRF/Registry/
+WRF/share/
+WRF/test/
+WRF/tools/
+WRF/var/
+WRF/wrftladj/
+WRF/Makefile
+WRF/compile
+WRF/configure
+WRF/clean
+WRF/log.compile
+
+# WRF/run lookup tables and static data (not needed for analysis)
+WRF/run/*.TBL
+WRF/run/*.BIN
+WRF/run/*.bin
+WRF/run/*.asc
+WRF/run/*.dat*
+WRF/run/*.nc
+WRF/run/*.tbl
+WRF/run/*.formatted
+WRF/run/CAM*
+WRF/run/CLM*
+WRF/run/ETAMP*
+WRF/run/RRTM*
+WRF/run/co2_trans
+WRF/run/tr49*
+WRF/run/tr67*
+WRF/run/grib*
+WRF/run/eclipse_*
+WRF/run/ishmael*
+WRF/run/wind-turbine*
+WRF/run/p3_lookup*
+WRF/run/ozone*
+WRF/run/*.original
+WRF/run/namelist.output
+WRF/run/log.wrf
+WRF/run/tmp.*
+
+# src/ directory (build artifacts)
+src/
+
 # OS artifacts
 .DS_Store
+._.DS_Store
+._*
 Thumbs.db
 
 # Editor files

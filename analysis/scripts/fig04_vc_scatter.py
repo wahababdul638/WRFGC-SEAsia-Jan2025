@@ -15,8 +15,8 @@ from precompute import load_all
 def plot(d):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     fig.subplots_adjust(wspace=0.30, top=0.85, bottom=0.14)
-    fig.suptitle('Ventilation Coefficient vs Aerosol Loading — Bangkok grid point\n'
-                 'WRF-GC January 2025  |  Jan 10–28 (post spin-up)', fontsize=11)
+    fig.suptitle('Ventilation Coefficient vs Aerosol Loading — Bangkok (13.75°N, 100.50°E)\n'
+                 'WRF-GC January 2025  |  Jan 10–28 analysis window', fontsize=11)
 
     pairs = [
         (d.vc_bkk_ts, d.pm25_bkk,    'PM$_{2.5}$ (µg m$^{-3}$)',  'Surface PM$_{2.5}$'),
@@ -47,7 +47,7 @@ def plot(d):
         ax.spines['right'].set_visible(False)
         ax.grid(True, alpha=0.25)
 
-    savefig(fig, 'figP4_vc_scatter.png')
+    savefig(fig, 'fig04_vc_scatter.png')
 
 
 if __name__ == '__main__':

@@ -33,8 +33,8 @@ def plot(d):
 
     fig, axes = plt.subplots(1, 2, figsize=(13, 6))
     fig.subplots_adjust(wspace=0.35, top=0.85, bottom=0.12)
-    fig.suptitle('Surface PM$_{2.5}$ Chemical Composition — Bangkok grid point\n'
-                 'WRF-GC January 2025  |  Stagnation vs Ventilated period', fontsize=11)
+    fig.suptitle('Surface PM$_{2.5}$ Chemical Composition — Bangkok (13.75°N, 100.50°E)\n'
+                 'WRF-GC January 2025  |  Stagnation vs Ventilated regimes', fontsize=11)
 
     for ax, vals, pcts, title, color, n_days in [
         (axes[0], stag_vals, stag_pct,
@@ -75,7 +75,7 @@ def plot(d):
     fig.legend(handles=handles, loc='lower center', ncol=4, fontsize=9,
                bbox_to_anchor=(0.5, 0.01), framealpha=0.8)
 
-    savefig(fig, 'figP2_aerosol_composition.png')
+    savefig(fig, 'fig02_aerosol_composition.png')
 
 
 if __name__ == '__main__':

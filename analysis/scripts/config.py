@@ -7,7 +7,7 @@ import os
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 WRF_RUN = '/home/abdul/TESTs/WRFGC_SEAsia_Jan2025/WRF/run'
-FIG_DIR  = '/home/abdul/TESTs/WRFGC_SEAsia_Jan2025/analysis/figures/proposal'
+FIG_DIR  = '/home/abdul/TESTs/WRFGC_SEAsia_Jan2025/analysis/figures'
 os.makedirs(FIG_DIR, exist_ok=True)
 
 # ── Domain and region ─────────────────────────────────────────────────────────

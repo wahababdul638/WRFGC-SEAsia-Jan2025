@@ -17,8 +17,8 @@ from precompute import load_all
 def plot(d):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     fig.subplots_adjust(wspace=0.32, top=0.85, bottom=0.14)
-    fig.suptitle('NOx – OH Chemistry: Stagnation vs Ventilation Regimes\n'
-                 'WRF-GC January 2025  |  Bangkok grid point', fontsize=11)
+    fig.suptitle('NOx – OH – Organic Aerosol Coupling — Bangkok (13.75°N, 100.50°E)\n'
+                 'WRF-GC January 2025  |  Stagnation vs Ventilated regimes', fontsize=11)
 
     # Left: NO2 vs OH
     ax = axes[0]
@@ -71,7 +71,7 @@ def plot(d):
             style='italic',
             bbox=dict(facecolor='#fef9f0', alpha=0.85, pad=2, lw=0.5, edgecolor='#bbb'))
 
-    savefig(fig, 'figP5_nox_oh_chemistry.png')
+    savefig(fig, 'fig05_nox_oh_chemistry.png')
 
 
 if __name__ == '__main__':

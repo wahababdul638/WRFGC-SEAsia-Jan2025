@@ -15,7 +15,7 @@ def plot(d):
     fig, axes = plt.subplots(4, 1, figsize=(11, 12), sharex=True)
     fig.subplots_adjust(hspace=0.08, top=0.93, bottom=0.07)
     fig.suptitle('WRF-GC January 2025 — Bangkok (13.75°N, 100.50°E)\n'
-                 'Daily surface chemistry and boundary-layer mixing',
+                 'Daily surface chemistry and boundary-layer mixing (Jan 10–28)',
                  fontsize=12, y=0.97)
 
     for ax in axes:
@@ -83,7 +83,7 @@ def plot(d):
     for ax in axes[:-1]:
         ax.yaxis.set_tick_params(labelsize=8)
 
-    savefig(fig, 'figP1_timeseries.png')
+    savefig(fig, 'fig01_timeseries.png')
 
 
 if __name__ == '__main__':
