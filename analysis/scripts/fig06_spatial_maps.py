@@ -21,7 +21,7 @@ def plot(d):
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 11),
                              subplot_kw={'projection': PROJ})
-    fig.subplots_adjust(wspace=0.06, hspace=0.12, top=0.91, bottom=0.04)
+    fig.subplots_adjust(wspace=0.06, hspace=0.20, top=0.88, bottom=0.04)
     fig.suptitle(
         'WRF-GC January 2025 — Spatial Distribution under Different Regimes\n'
         f'Stagnation (n={d.stag_mask.sum()} days, VC ≤ {d.vc_median:.0f} m² s⁻¹)  vs  '

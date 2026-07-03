@@ -32,7 +32,7 @@ def plot(d):
     vent_pct    = vent_vals / vent_vals.sum() * 100
 
     fig, axes = plt.subplots(1, 2, figsize=(13, 6))
-    fig.subplots_adjust(wspace=0.35, top=0.85, bottom=0.12)
+    fig.subplots_adjust(wspace=0.45, top=0.82, bottom=0.12)
     fig.suptitle('Surface PM$_{2.5}$ Chemical Composition — Bangkok (13.75°N, 100.50°E)\n'
                  'WRF-GC January 2025  |  Stagnation vs Ventilated regimes', fontsize=11)
 

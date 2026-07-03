@@ -14,7 +14,7 @@ from precompute import load_all
 
 def plot(d):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-    fig.subplots_adjust(wspace=0.30, top=0.85, bottom=0.14)
+    fig.subplots_adjust(wspace=0.45, top=0.82, bottom=0.14)
     fig.suptitle('Ventilation Coefficient vs Aerosol Loading — Bangkok (13.75°N, 100.50°E)\n'
                  'WRF-GC January 2025  |  Jan 10–28 analysis window', fontsize=11)
 

@@ -14,7 +14,7 @@ def plot(d):
     n_v = d.vent_mask.sum()
 
     fig, axes = plt.subplots(2, 3, figsize=(14, 8))
-    fig.subplots_adjust(hspace=0.40, wspace=0.35, top=0.88, bottom=0.10)
+    fig.subplots_adjust(hspace=0.40, wspace=0.45, top=0.84, bottom=0.10)
     fig.suptitle('Stagnation vs Ventilated Regime Summary — Bangkok (13.75°N, 100.50°E)\n'
                  'WRF-GC January 2025  |  Surface concentrations at 07:00 LST  |  error bars = ±1σ',
                  fontsize=11)

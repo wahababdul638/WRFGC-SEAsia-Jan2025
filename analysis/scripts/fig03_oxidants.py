@@ -17,7 +17,7 @@ from precompute import load_all
 
 def plot(d):
     fig, axes = plt.subplots(1, 3, figsize=(13, 5))
-    fig.subplots_adjust(wspace=0.35, top=0.85, bottom=0.18)
+    fig.subplots_adjust(wspace=0.45, top=0.82, bottom=0.18)
     fig.suptitle('Atmospheric Oxidant Concentrations — Bangkok (13.75°N, 100.50°E)\n'
                  'WRF-GC January 2025  |  Stagnation vs Ventilated  |  07:00 LST snapshots',
                  fontsize=11)

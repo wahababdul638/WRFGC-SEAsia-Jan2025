@@ -46,7 +46,7 @@ def plot(d):
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 11),
                              subplot_kw={'projection': PROJ})
-    fig.subplots_adjust(wspace=0.06, hspace=0.14, top=0.91, bottom=0.04)
+    fig.subplots_adjust(wspace=0.06, hspace=0.20, top=0.88, bottom=0.04)
     fig.suptitle(
         'SOA Precursor Spatial Distribution — Stagnation Composite\n'
         f'WRF-GC January 2025  |  n = {d.stag_mask.sum()} stagnation days  |  '
