@@ -13,7 +13,7 @@ from precompute import load_all
 
 def plot(d):
     fig, axes = plt.subplots(4, 1, figsize=(11, 12), sharex=True)
-    fig.subplots_adjust(hspace=0.08, top=0.93, bottom=0.07)
+    fig.subplots_adjust(hspace=0.15, top=0.90, bottom=0.07)
     fig.suptitle('WRF-GC January 2025 — Bangkok (13.75°N, 100.50°E)\n'
                  'Daily surface chemistry and boundary-layer mixing (Jan 10–28)',
                  fontsize=12, y=0.97)
@@ -61,20 +61,26 @@ def plot(d):
     ax.text(0.01, 0.88, '(c)', transform=ax.transAxes, fontsize=9, fontweight='bold')
     ax2.spines['top'].set_visible(False)
 
-    # (d) Ventilation coefficient
+    # (d) Ventilation coefficient — domain-mean (Thailand) VC used for regime classification
     ax = axes[3]
-    ax.fill_between(d.dates_late, d.vc_bkk_ts, d.vc_median,
-                    where=(d.vc_bkk_ts <= d.vc_median),
+    ax.fill_between(d.dates_late, d.vc_th_ts, d.vc_median,
+                    where=(d.vc_th_ts <= d.vc_median),
                     alpha=0.4, color=C_STAG, label='Stagnation')
-    ax.fill_between(d.dates_late, d.vc_bkk_ts, d.vc_median,
-                    where=(d.vc_bkk_ts > d.vc_median),
+    ax.fill_between(d.dates_late, d.vc_th_ts, d.vc_median,
+                    where=(d.vc_th_ts > d.vc_median),
                     alpha=0.4, color=C_VENT, label='Ventilated')
-    ax.plot(d.dates_late, d.vc_bkk_ts, 'k-', lw=1.5, zorder=3)
+    ax.plot(d.dates_late, d.vc_th_ts, 'k-', lw=1.5, zorder=3, label='Thailand domain-mean VC')
+    ax.plot(d.dates_late, d.vc_bkk_ts, '--', color='#95a5a6', lw=1.0, zorder=2,
+            label=f'Bangkok point VC (urban, lower)')
     ax.axhline(d.vc_median, color='gray', lw=1.0, ls='--',
-               label=f'Median VC = {d.vc_median:.0f} m² s⁻¹')
+               label=f'Classification threshold = {d.vc_median:.0f} m² s⁻¹')
     ax.set_ylabel('Vent. Coeff. (m² s$^{-1}$)', fontsize=9)
     ax.legend(fontsize=7, loc='upper right', framealpha=0.7)
     ax.text(0.01, 0.88, '(d)', transform=ax.transAxes, fontsize=9, fontweight='bold')
+    ax.text(0.01, 0.04,
+            'Classification based on Thailand domain-mean VC (black line).\n'
+            'Bangkok urban point VC (grey dashed) is 5–7× lower due to shallow morning BL.',
+            transform=ax.transAxes, fontsize=6.5, style='italic', color='#666')
 
     xfmt = mdates.DateFormatter('%d %b')
     axes[-1].xaxis.set_major_formatter(xfmt)

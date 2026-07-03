@@ -18,9 +18,15 @@ import fig05_nox_oh_chemistry
 import fig06_spatial_maps
 import fig07_summary_bars
 import fig08_soa_precursors
+import fig09_stagnation_chemistry
+import fig10_oxidant_chemistry
+import fig11_soa_drivers
+import fig12_mechanism_proof
+import fig13_intuitive_summary
+import fig14_vertical_mechanisms
 
 if __name__ == '__main__':
-    print("=== WRF-GC Proposal Defense Figures ===\n")
+    print("=== WRF-GC January 2025 Analysis Figures ===\n")
     d = load_all()
 
     fig01_timeseries.plot(d)
@@ -31,5 +37,11 @@ if __name__ == '__main__':
     fig06_spatial_maps.plot(d)
     fig07_summary_bars.plot(d)
     fig08_soa_precursors.plot(d)
+    fig09_stagnation_chemistry.plot(d)
+    fig10_oxidant_chemistry.plot(d)
+    fig11_soa_drivers.plot(d)
+    fig12_mechanism_proof.plot(d)
+    fig13_intuitive_summary.plot(d)
+    fig14_vertical_mechanisms.plot(d)
 
     print("\nAll figures complete.")
