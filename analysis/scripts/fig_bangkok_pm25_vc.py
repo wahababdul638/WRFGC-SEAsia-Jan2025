@@ -19,7 +19,7 @@ from precompute import load_all
 
 def plot(d):
     fig, ax1 = plt.subplots(figsize=(10, 5))
-    fig.subplots_adjust(top=0.88, bottom=0.13, left=0.10, right=0.90)
+    fig.subplots_adjust(top=0.88, bottom=0.22, left=0.10, right=0.90)
     fig.suptitle(
         'WRF-GC January 2025 — Bangkok Grid Point (13.75°N, 100.50°E)\n'
         'Daily surface PM$_{2.5}$ and Ventilation Coefficient',
@@ -49,16 +49,18 @@ def plot(d):
     ax1.spines['top'].set_visible(False)
     ax2.spines['top'].set_visible(False)
 
-    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%d %b'))
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%d'))
     ax1.xaxis.set_major_locator(mdates.DayLocator(interval=2))
-    plt.setp(ax1.xaxis.get_majorticklabels(), rotation=30, ha='right', fontsize=9)
+    plt.setp(ax1.xaxis.get_majorticklabels(), rotation=0, ha='center', fontsize=9)
+    ax1.set_xlabel('January 2025', fontsize=10)
 
     lines = [l1, l2,
              plt.Line2D([0], [0], color='#c0392b', lw=0.8, ls='--', alpha=0.5),
              plt.Line2D([0], [0], color='#c0392b', lw=0.8, ls=':',  alpha=0.5)]
     labels = ['PM$_{2.5}$ (µg m$^{-3}$)', 'VC (m² s$^{-1}$)',
               'WHO 24-hr guideline (15 µg m⁻³)', 'Thailand NAAQS (37.5 µg m⁻³)']
-    ax1.legend(lines, labels, fontsize=8, loc='upper left', framealpha=0.85)
+    ax1.legend(lines, labels, fontsize=8, ncol=2, framealpha=0.90,
+               loc='upper center', bbox_to_anchor=(0.5, -0.22))
 
     savefig(fig, 'fig_bangkok_pm25_vc.png')
 
